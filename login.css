@@ -18,9 +18,23 @@ body {
 }
 
 h1 {
-    font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 20px;
-}
+    font-family: "Roboto Flex","Teko", sans-serif, serif;
+    font-optical-sizing: auto;
+    font-weight:lighter;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "wdth" 100,
+      "GRAD" 0,
+      "XOPQ" 96,
+      "XTRA" 468,
+      "YOPQ" 79,
+      "YTAS" 750,
+      "YTDE" -203,
+      "YTFI" 738,
+      "YTLC" 514,
+      "YTUC" 712;
+  }
 
 h2 {
     text-align: left;
@@ -52,6 +66,15 @@ button:hover {
     background-color: #92a8b3;
 }
 
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: none;
+    text-align: left;
+}
+
+
 .link-container {
     display: flex;
     justify-content: space-between;
@@ -66,12 +89,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.error-message {
-    color: red;
-    font-size: 12px;
-    margin-bottom: 10px;
-    display: none;
-    text-align: left;
 }
