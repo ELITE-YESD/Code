@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ELITE 로그인 및 회원가입</title>
+	<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>ELITE</h1>
+		<!-- 로그인 폼 -->
+		<div id="login-form-container" class="form-container">
+			<h2>아이디</h2>
+			<input type="email" id="login-email" placeholder="연세 이메일 주소" required>
+			 <!-- 아이디 오류 메시지 -->
+			<p id="login-email-error" class="error-message"></p>
+			<h2>비밀번호</h2>
+			<input type="password" id="login-password" placeholder="영문+숫자 8자리, 특수문자 1자리" required>
+			<!-- 비밀번호 오류 메시지 -->
+			<p id="login-password-error" class="error-message"></p>
+			<button id="login-button">로그인</button>
+			<div class="link-container">
+				<!-- <a href="#" id="find-password-link">비밀번호 찾기</a> -->
+				<a href="#" id="show-register-link">회원가입</a>
+			</div>
+		</div>
+
+		<!-- 회원가입 폼 -->
+		<div id="register-form-container" class="form-container" style="display: none;">
+			<h2>아이디</h2>
+			<input type="email" id="register-email" placeholder="연세 이메일 주소 ex)0000@yonsei.ac.kr" required>
+			<p id="register-email-error" class="error-message"></p> <!-- 아이디 오류 메시지 -->
+			<h2>비밀번호</h2>
+			<input type="password" id="register-password" placeholder="영문+숫자 8자리, 특수문자 1자리" required>
+			<p id="register-password-error" class="error-message"></p> <!-- 비밀번호 오류 메시지 -->
+			<h2>이름</h2>
+			<input type="text" id="register-name" placeholder="이름" required>
+			<h2>생년월일</h2>
+			<input type="date" id="register-dob" required>
+			<button id="register-button">회원가입</button>
+			<div class="link-container">
+				<a href="#" id="show-login-link">로그인으로 돌아가기</a>
+			</div>
+		</div>
+
+	</div>
+	<script src="login.js"></script>
+</body>
+
+</html>
