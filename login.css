@@ -34,6 +34,10 @@ h1 {
       "YTFI" 738,
       "YTLC" 514,
       "YTUC" 712;
+    font-size: 1.8rem;
+    text-align: center;
+    flex: 1;
+
   }
 
 h2 {
@@ -89,4 +93,15 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+h1 a {
+    color: #727272;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+h1 a:hover {
+    color: #000000;
+    text-decoration: none;
 }
