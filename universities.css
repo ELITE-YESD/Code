@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a5b9c4; /* main 페이지의 색상 */
+    padding: 2px 10px; /* 높이를 줄이기 위해 패딩을 줄임 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container h1 {
+    font-family: "Roboto Flex","Teko", sans-serif, serif;
+    font-optical-sizing: auto;
+    font-weight:lighter;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "wdth" 100,
+      "GRAD" 0,
+      "XOPQ" 96,
+      "XTRA" 468,
+      "YOPQ" 79,
+      "YTAS" 750,
+      "YTDE" -203,
+      "YTFI" 738,
+      "YTLC" 514,
+      "YTUC" 712;
+    font-size: 1.0rem;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #7a9ba5;
+}
+
+.content-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px; /* 전체 박스의 너비 */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title-section {
+    background-color: #a5b9c4; /* 제목 색상 */
+    padding: 15px; /* 줄인 패딩 */
+    text-align: center;
+    margin: 10px auto;
+    max-width: 400px; /* 너비 조정 */
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.8rem; /* 폰트 크기 조정 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px; /* 너비 조정 */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0;
+}
+
+.table-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+h1 a {
+    color: #727272;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+h1 a:hover {
+    color: #000000;
+    text-decoration: none;
+}
