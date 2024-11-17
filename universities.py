@@ -1,16 +1,21 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, send_from_directory
 import pandas as pd
+import os
 
-print("Before loading the Excel file...")
+app = Flask(__name__)
+
+# 정적 파일 경로를 명시적으로 설정 (일반적으로 필요하지 않음)
+app.static_folder = 'static'
+
+# 데이터 로드
 try:
     data = pd.read_excel(r"C:\Users\이찬우\Desktop\Coding\HTML\Code\2023-2_연세대_점수+최종합격대학.xlsx")
-    print("Excel file loaded successfully.")
 except Exception as e:
     print(f"Error loading Excel file: {e}")
 
-print("After loading the Excel file...")
-
-app = Flask(__name__)
+@app.route('/')
+def home():
+    return render_template('universities.html')
 
 @app.route('/get-university', methods=['GET'])
 def get_university():
@@ -23,7 +28,5 @@ def get_university():
     else:
         return jsonify({'error': '해당 점수에 대한 데이터가 없습니다.'})
 
-print("Starting Flask app...")
 if __name__ == '__main__':
-    print("Flask app is about to run...")
     app.run(debug=True)

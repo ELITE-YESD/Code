@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지원 가능 대학</title>
-    <!-- Flask의 static 경로를 사용하여 CSS 파일 연결 -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='universities.css') }}">
+    <link rel="stylesheet" href="universities.css">
 </head>
 <body>
     <header class="main-header">
@@ -14,7 +13,7 @@
         </div>
         <nav class="auth-buttons">
             <a href="login.html" class="nav-button">로그인</a>
-            <a href="signup.html" class="nav-button">회원가입</a>
+            <a href="login.html" class="nav-button">회원가입</a>
         </nav>
     </header>
     <main class="content-container">
@@ -46,7 +45,6 @@
         </section>
     </main>
 
-    <!-- Flask의 static 경로를 사용하여 JS 파일 연결 -->
-    <script src="{{ url_for('static', filename='universities.js') }}"></script>
+    <script src="universities.js"></script>
 </body>
 </html>
