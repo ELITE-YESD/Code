@@ -4,38 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지원 가능 대학</title>
-    <link rel="stylesheet" href="universities.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='universities.css') }}">
 </head>
 <body>
     <header class="main-header">
-        <div class="logo-container">
-            <h1><a href="main.html">ELITE</a></h1>
+        <div class="header-container">
+            <div class="logo"><a href="main.html">ELITE</a></div>
+            <div class="auth-buttons">
+                <div class="quick-access"><a href="login.html" id="login-link">로그인</a></div>
+                <div class="quick-access"><a href="signup.html" id="signup-link">회원가입</a></div>
+            </div>
         </div>
-        <nav class="auth-buttons">
-            <a href="login.html" class="nav-button">로그인</a>
-            <a href="login.html" class="nav-button">회원가입</a>
-        </nav>
     </header>
     <main class="content-container">
         <section class="title-section">
             <h2>지원 가능 대학</h2>
         </section>
 
-        <!-- 점수 입력 및 버튼 -->
-        <section class="input-section">
-            <label for="score-input">점수를 입력하세요:</label>
-            <input type="number" id="score-input" placeholder="예: 314.2" step="0.1">
-            <button id="check-score-btn">확인</button>
-        </section>
-
-        <!-- 결과 표시 -->
-        <section class="result-section">
-            <h2>결과</h2>
-            <p id="result">점수를 입력하고 확인 버튼을 눌러주세요.</p>
-        </section>
-        
-        <section class="info-box">
-            <h3>과거 000점 선배는 000대학을 갔습니다.</h3>
+        <!-- 데이터 결과 표시 -->
+        <section class="info-box" id="university-result">
+            <h3>000점 선배는 000대학을 갔습니다.</h3>
         </section>
         
         <section class="table-container">
@@ -45,6 +33,6 @@
         </section>
     </main>
 
-    <script src="universities.js"></script>
+    <script src="{{ url_for('static', filename='universities.js') }}"></script>
 </body>
 </html>

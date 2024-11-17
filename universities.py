@@ -1,11 +1,10 @@
 from flask import Flask, request, jsonify, render_template, send_from_directory
 import pandas as pd
 import os
+from flask_cors import CORS
 
-app = Flask(__name__)
-
-# 정적 파일 경로를 명시적으로 설정 (일반적으로 필요하지 않음)
-app.static_folder = 'static'
+app = Flask(__name__, static_url_path='/static')
+CORS(app)
 
 # 데이터 로드
 try:
