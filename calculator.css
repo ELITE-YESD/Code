@@ -1,0 +1,225 @@
+
+/* 전체 컨테이너 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px;
+    max-width: 100%; /* 전체 컨테이너의 최대 너비 설정 */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 계산기 박스 */
+.calculator-container {
+    flex: 1; /* 1/3 비율 */
+    padding: 20px; /* 내부 여백 추가 */
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 각 항목 간 간격 */
+    height: max-content;
+}
+
+.result-container {
+    flex: 2; /* 1/3 비율 */
+    padding: 20px; /* 내부 여백 추가 */
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 각 항목 간 간격 */
+    height:max-content;
+}
+
+.calculator-section{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #e8ebf1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.result-section {
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    background: #e8ebf1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* 제목 스타일 */
+.calculator-section h3,
+.result-section h3{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin:0%;
+    margin-bottom: 20px;
+    background: #a8b8d8;
+    color: white;
+    font-size: clamp(30px, 2vw, 18px); /* 화면 크기에 맞춰 폰트 크기 조정 */
+    border-radius: 8px;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* 입력 그룹 */ 
+.input-group {
+    width: 100%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: space-between; /* 좌우로 요소 배치 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.input-group label {
+    max-width: 200px;
+    font-size: 20px;
+    color: #333;
+    align-items: left;
+    flex: 1;
+}
+
+/* 입력 필드 및 셀렉트 박스 */
+.input-group input{
+    width: 100%;
+    max-width: 500px;
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    align-items: right;
+    flex: 1; /* 입력 필드가 오른쪽에 고정된 비율을 차지 */
+}
+
+/* 버튼 스타일 */
+.calculate-button {
+    width: 100%;
+    max-width: 400px;
+    height: 70px;
+    padding: 14px;
+    font-size: 16px;
+    color: white;
+    background: #6c83d5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.calculate-button:hover {
+    background: #5369a9;
+    transform: scale(1.02);
+}
+
+.result-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+/* 왼쪽 결과 박스들 */
+.result-boxes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* 결과 박스 스타일 */
+.result {
+    width: 90%;
+    height: 100px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 다시 계산하기 버튼 */
+.recalculate-button {
+    width: 100%;
+    max-width: 200px;
+    height: 60px;
+    font-size: 18px;
+    color: white;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.recalculate-button:hover {
+    background: #e85050;
+    transform: scale(1.02);
+}
+
+/* 오른쪽 그래프 */
+.result-graph {
+    flex: 2;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+
+
+/* 작은 화면 대응 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 작은 화면에서는 세로로 배치 */
+    }
+
+    .calculator-container,
+    .result-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .calculator-section,
+    .result-section {
+        min-width: 100%;
+    }
+}

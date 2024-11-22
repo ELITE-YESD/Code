@@ -203,11 +203,6 @@ a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.info-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
 .info-box h2 {
     margin-bottom: 15px;
     color: #333;
@@ -218,4 +213,15 @@ a:hover {
 
 .info-box p {
     color: #666;
+}
+
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 20px;
+}
+
+.title-section, .info-box, .table-container {
+    margin: 20px auto; /* 중앙 정렬 */
+    text-align: center; /* 내부 텍스트 중앙 정렬 */
 }
